@@ -1,0 +1,54 @@
+﻿@using System.Data;
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+@{
+
+    DataSet ds = new DataSet("playlist");
+
+    DataTable songs = new DataTable("song");
+
+    DataColumn title = new DataColumn("title");
+    DataColumn artist = new DataColumn("artist");
+    DataColumn album = new DataColumn("album");
+    DataColumn year = new DataColumn("year");
+
+    ds.Tables.Add(songs);
+    songs.Columns.Add(title);
+    songs.Columns.Add(artist);
+    songs.Columns.Add(album);
+    songs.Columns.Add(year);
+
+    ds.ReadXml(HttpContext.Current.Server.MapPath("playlist.xml"));
+
+}
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <div>
+        Playlist
+    </div>
+    <div>
+        <table border="1">
+            @foreach (DataRow dr in ds.Tables["song"].Rows)
+            {
+            <tr>
+
+                <td> @dr["title"]</td>
+                <td> @dr["artist"]</td>
+                <td> @dr["album"]</td>
+                <td> @dr["year"]</td>
+
+            </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>
