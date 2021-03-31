@@ -6,17 +6,20 @@
 		<artist>artist</artist>
 		<album>album</album>
 		<year>year</year>
+		<length>length</length>
 	</song>
 	<song>
 		<title>barry badaap</title>
 		<artist>Kapitein haak en de voederbietels</artist>
 		<album>.</album>
 		<year>2020</year>
+		<length>3:15</length>
 	</song>
 	<song>
 		<title>kapitein iglo en de zeven dwergen</title>
 		<artist>bananenkaas</artist>
 		<album>.2</album>
 		<year>2020</year>
+		<length>5:45</length>
 	</song>
 </playlist>
