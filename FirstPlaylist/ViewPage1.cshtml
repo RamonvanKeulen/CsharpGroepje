@@ -38,10 +38,17 @@
     <link rel="stylesheet" href="~/Content/bootstrap.css" />
     <script src="~/Scripts/bootstrap.js"></script>
 </head>
+<style>
+
+    body {
+        background-color: #343a40;
+    }
+</style>
 <body>
-    <h1 class="display-2">Playlist</h1>
+    <h1 class="text-white">Nummers die je leuk vindt</h1>
+    <a>Afspelen</a>
     <div>
-        <table class="table-hover table">
+        <table class="table-dark table table-hover">
             @foreach (DataRow dr in ds.Tables["song"].Rows)
             {
             <tr>
