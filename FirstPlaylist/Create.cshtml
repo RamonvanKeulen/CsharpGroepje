@@ -1,0 +1,49 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+
+    <script src="~/Scripts/jquery-3.0.0.js"></script>
+
+    <link rel="stylesheet" href="~/Content/bootstrap.css" />
+    <script src="~/Scripts/bootstrap.js"></script>
+</head>
+<body>
+    <div>
+        <a class="page-link" href="~/viewpage1.cshtml">Go back to homepage</a>
+        Create page
+        <form method="post" action="#">
+            <input class="form-text" type="text" name="title" />
+            <input class="form-text" type="text" name="artist" />
+            <input class="form-text" type="text" name="album" />
+            <input class="form-text" type="text" name="year" />
+            <input class="form-text" type="text" name="length" />
+            <input class="btn-sm" type="submit" value="save" />
+        </form>
+    </div>
+
+    @{ 
+        if(IsPost)
+        {
+            string title = Request.Form["title"];
+            string artist = Request.Form["artist"];
+            string album = Request.Form["album"];
+            string year = Request.Form["year"];
+            string length = Request.Form["length"];
+
+        <div>
+            <span class="text-info">You have submitted: @title @artist @album @year @length</span>
+        </div>
+            Response.Redirect("viewpage1.cshtml");
+        }
+
+
+    }
+</body>
+</html>
