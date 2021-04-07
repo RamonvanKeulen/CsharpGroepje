@@ -2,6 +2,13 @@
     background-color: #343a40;
     color: white;
 }
+a {
+    color: white;
+}
+a:hover {
+    text-decoration: none;
+    color: #0069D9;
+}
 .header {
     text-align: center;
     color: white;
