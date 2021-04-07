@@ -3,4 +3,14 @@
 }
 .header {
     text-align: center;
+    color: white;
+}
+.header:hover {
+    color: #0069D9;
+}
+.header b {
+    color: #0069D9;
+}
+.header:hover b {
+    color: white;
 }
