@@ -41,8 +41,10 @@
     <link rel="stylesheet" href="~/style.css" />
 </head>
 <body>
-    <h1 class="text-white">BluePLAY</h1>
-    <a class="btn btn-primary" href="create.cshtml">New song</a>
+    <div class="header">
+        <h1 class="text-white"><a class="btn btn-primary float-left" href="create.cshtml">New song</a>BLUE<b style="color: #0069D9;">PLAY</b></h1>
+        
+    </div>
     <div>
         <table class="table-dark table table-hover">
             @foreach (DataRow dr in ds.Tables["song"].Rows)
