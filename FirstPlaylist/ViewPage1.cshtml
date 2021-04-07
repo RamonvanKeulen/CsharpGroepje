@@ -46,23 +46,24 @@
         <h1 class="text">
             BLUE<b>PLAY</b>
         </h1>
-        <a class="btn btn-primary float-left" href="create.cshtml">New song</a> <br /><br />
-
+    </div>
+    <div class="menustyle">
+        <a class="btn btn-primary" href="create.cshtml">New song</a> <br /><br />
     </div>
     <div>
         <table class="table-dark table table-hover">
             <tr class="table-light text-dark"><td>Titel</td><td>Artiest</td><td>Album</td><td>Jaar</td><td>Lengte</td></tr>
             @foreach (DataRow dr in ds.Tables["song"].Rows)
             {
-            <tr>
+                <tr>
 
-                <td> @dr["title"]</td>
-                <td> @dr["artist"]</td>
-                <td> @dr["album"]</td>
-                <td> @dr["year"]</td>
-                <td> @dr["length"]</td>
+                    <td> @dr["title"]</td>
+                    <td> @dr["artist"]</td>
+                    <td> @dr["album"]</td>
+                    <td> @dr["year"]</td>
+                    <td> @dr["length"]</td>
 
-            </tr>
+                </tr>
             }
         </table>
     </div>

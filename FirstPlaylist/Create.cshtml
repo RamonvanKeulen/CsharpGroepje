@@ -24,17 +24,19 @@
         </h1>
 
     </div>
-    <div>
+    <div class="boxcontainer">
         <a class="btn btn-outline-primary" href="~/viewpage1.cshtml">Go back to homepage</a>
-        Create page<br /><br />
-        <form method="post" action="#">
-            <input class="form-control mb-2" type="text" name="title" placeholder="Titel" />
-            <input class="form-control mb-2" type="text" name="artist" placeholder="Artiest" />
-            <input class="form-control mb-2" type="text" name="album" placeholder="Album" />
-            <input class="form-control mb-2" type="text" name="year" placeholder="Jaar" />
-            <input class="form-control mb-2" type="text" name="length" placeholder="Lengte" />
-            <input class="btn btn-primary" type="submit" value="Opslaan" />
-        </form>
+        Nummers Toevoegen<br /><br />
+        <div class="formfield">
+            <form method="post" action="#">
+                <input class="form-control mb-2" type="text" name="title" placeholder="Titel" />
+                <input class="form-control mb-2" type="text" name="artist" placeholder="Artiest" />
+                <input class="form-control mb-2" type="text" name="album" placeholder="Album" />
+                <input class="form-control mb-2" type="text" name="year" placeholder="Jaar" />
+                <input class="form-control mb-2" type="text" name="length" placeholder="Lengte" />
+                <input class="btn btn-primary" type="submit" value="Opslaan" />
+            </form>
+        </div>
     </div>
 
     @{

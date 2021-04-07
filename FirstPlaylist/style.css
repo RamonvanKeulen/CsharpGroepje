@@ -15,3 +15,17 @@
 .header:hover b {
     color: white;
 }
+
+.menustyle {
+    width: 80%;
+    margin: auto;
+}
+
+.boxcontainer {
+    width: 80%;
+    margin: auto;
+}
+.formfield {
+    width: 40%;
+    margin: auto;
+}
