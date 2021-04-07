@@ -39,14 +39,18 @@
     <script src="~/Scripts/bootstrap.js"></script>
 
     <link rel="stylesheet" href="~/style.css" />
+    <link rel='icon' href='favicon.jpg' type='image/jpg' />
 </head>
 <body>
     <div class="header">
-        <h1 class="text"><a class="btn btn-primary float-left" href="create.cshtml">New song</a>BLUE<b>PLAY</b></h1>
+        <h1 class="text">
+            <a class="btn btn-primary float-left" href="create.cshtml">New song</a>BLUE<b>PLAY</b>
+        </h1>
         
     </div>
     <div>
         <table class="table-dark table table-hover">
+            <tr class="table-light text-dark"><td>Titel</td><td>Artiest</td><td>Album</td><td>Jaar</td><td>Lengte</td></tr>
             @foreach (DataRow dr in ds.Tables["song"].Rows)
             {
             <tr>
