@@ -1,5 +1,15 @@
 ﻿@{
-    Layout = null;
+        Layout = null;
+        SongMethods mySongMethods = new SongMethods();
+        string file = @"~\App_Data\Playlist.xml";
+        DataSet ds = mySongMethods.GetAllSong(file);
+        Session["playlistClass"] = mySongMethods;
+        Session["file"] = file;
+
+    public class SongMethods
+    {
+        private DataSet ds = new DataSet("playlist");
+    }
 }
 
 <!DOCTYPE html>
