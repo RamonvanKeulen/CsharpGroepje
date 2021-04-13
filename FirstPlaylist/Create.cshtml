@@ -1,7 +1,7 @@
 ﻿@{
         Layout = null;
         SongMethods mySongMethods = new SongMethods();
-        string file = @"~\App_Data\Playlist.xml";
+        string file = @"~\Playlist.xml";
         DataSet ds = mySongMethods.GetAllSong(file);
         Session["playlistClass"] = mySongMethods;
         Session["file"] = file;
@@ -9,6 +9,26 @@
     public class SongMethods
     {
         private DataSet ds = new DataSet("playlist");
+
+        public SongMethods()
+        {
+
+        }
+        public DataSet GetAllSongs(string pFile)
+        {
+            DataTable dtSongs = new DataTable("song");
+        }
+        public DataRow GetEmptyDataRow()
+        {
+            DataRow dr = ds.Tables["song"].NewRow();
+            return dr;
+        }
+
+        public void CreateSong(DataRow dataRow, string file)
+        {
+            ds.Tables["song"].Rows.Add(dataRow);
+            ds.WriteXml(HttpContext.Current.Server.MapPath(file));
+        }
     }
 }
 
@@ -28,45 +48,49 @@
     <link rel='icon' href='favicon.jpg' type='image/jpg' />
 </head>
 <body>
-    <div class="header">
-        <h1 class="text">
-            <a href="~/viewpage1.cshtml">
-                BLUE<b>PLAY</b>
-            </a>
-        </h1>
-    </div>
-
-    <div class="boxcontainer">
-        <a class="btn btn-outline-primary" href="~/viewpage1.cshtml">Go back to homepage</a>
-        Nummers Toevoegen<br /><br />
-        <div class="formfield">
-            <form method="post" action="#">
-                <input class="form-control mb-2" type="text" name="title" placeholder="Titel" />
-                <input class="form-control mb-2" type="text" name="artist" placeholder="Artiest" />
-                <input class="form-control mb-2" type="text" name="album" placeholder="Album" />
-                <input class="form-control mb-2" type="text" name="year" placeholder="Jaar" />
-                <input class="form-control mb-2" type="text" name="length" placeholder="Lengte" />
-                <input class="btn btn-primary" type="submit" value="Opslaan" />
-            </form>
-        </div>
-    </div>
-
     @{
-        if (IsPost)
-        {
-            string title = Request.Form["title"];
-            string artist = Request.Form["artist"];
-            string album = Request.Form["album"];
-            string year = Request.Form["year"];
-            string length = Request.Form["length"];
 
-            <div>
-                <span class="text-info">You have submitted: @title @artist @album @year @length</span>
-            </div>
-            Response.Redirect("viewpage1.cshtml");
-        }
-
-
+        SongMethods mySongMethods = Session["playlistClass"] as SongMethods;
+        string file = Session["file"] as string;
     }
-</body>
+        <div class="header">
+            <h1 class="text">
+                <a href="~/viewpage1.cshtml">
+                    BLUE<b>PLAY</b>
+                </a>
+            </h1>
+        </div>
+
+        <div class="boxcontainer">
+            <a class="btn btn-outline-primary" href="~/viewpage1.cshtml">Go back to homepage</a>
+            Nummers Toevoegen<br /><br />
+            <div class="formfield">
+                <form method="post" action="#">
+                    <input class="form-control mb-2" type="text" name="title" placeholder="Titel" />
+                    <input class="form-control mb-2" type="text" name="artist" placeholder="Artiest" />
+                    <input class="form-control mb-2" type="text" name="album" placeholder="Album" />
+                    <input class="form-control mb-2" type="text" name="year" placeholder="Jaar" />
+                    <input class="form-control mb-2" type="text" name="length" placeholder="Lengte" />
+                    <input class="btn btn-primary" type="submit" value="Opslaan" />
+                </form>
+            </div>
+        </div>
+
+        @{
+            if (IsPost) {
+                DataRow dr = mySongMethods.GetEmptyDataRow();
+
+                dr[0] = Request.Form["id"];
+                dr[1] = Request.Form["title"];
+                dr[2] = Request.Form["artist"];
+                dr[3] = Request.Form["album"];
+                dr[4] = Request.Form["year"];
+                dr[5] = Request.Form["length"];
+                dr[6] = Request.Form["file"];
+
+                mySongMethods.CreateSong(dr, file);
+                Response.Redirect(@"~/index.cshtml")
+            }
+        }
+    </body>
 </html>
