@@ -1,33 +1,10 @@
-﻿
-@{ public class SongMethods
-{
-    private DataSet ds = new DataSet("playlist");
+﻿@using System.Data;
+@using FirstPlaylist.App_Code;
 
-    public SongMethods()
-    {
 
-    }
-    public DataSet GetAllSongs(string pFile)
-    {
-        DataTable dtSongs = new DataTable("song");
-    }
-    public DataRow GetEmptyDataRow()
-    {
-        DataRow dr = ds.Tables["song"].NewRow();
-        return dr;
-    }
-
-    public void CreateSong(DataRow dataRow, string file)
-    {
-        ds.Tables["song"].Rows.Add(dataRow);
-        ds.WriteXml(HttpContext.Current.Server.MapPath(file));
-    }
-}
-}
 
 <!DOCTYPE html>
-@using System.Data;
-@using XmlCrud.App_Code;
+
 
 @{
     SongMethods mySongMethods = Session["playlistClass"] as SongMethods;
@@ -73,18 +50,18 @@
 
 
     @if (IsPost) {
-                    DataRow dr = mySongMethods.GetEmptyDataRow();
+                        DataRow dr = SongMethods.GetEmptyRow();
 
             dr[0]= Request.Form["title"];
-                    dr[1] = Request.Form["artist"];
-                    dr[2] = Request.Form["album"];
-                    dr[3] = Request.Form["year"];
-                    dr[4] = Request.Form["length"];
-                    dr[5] = Request.Form["file"];
+                        dr[1] = Request.Form["artist"];
+                        dr[2] = Request.Form["album"];
+                        dr[3] = Request.Form["year"];
+                        dr[4] = Request.Form["length"];
+                        dr[5] = Request.Form["file"];
 
-                    mySongMethods.CreateSong(dr, file);
-                    Response.Redirect(@"~/index.cshtml")
-                }
+                        SongMethods.CreateSong(dr, file);
+                        Response.Redirect(@"~/index.cshtml")
+                    }
     }
 </body>
 </html>
