@@ -35,7 +35,7 @@ namespace FirstPlaylist.App_Code
             return ds.Tables["song"].NewRow();
         }
 
-        public void SaveRow(DataRow dr)
+        public void SaveRow(string file, DataRow dr)
         {
             ds.Tables["song"].Rows.Add(dr);
             ds.WriteXml(HttpContext.Current.Server.MapPath(file));
