@@ -42,6 +42,8 @@
 
     <link rel="stylesheet" href="~/style.css" />
     <link rel='icon' href='favicon.jpg' type='image/jpg' />
+
+    <script src="https://kit.fontawesome.com/af571886a6.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="header">
@@ -66,7 +68,7 @@
                     <td> @dr["album"]</td>
                     <td> @dr["year"]</td>
                     <td> @dr["length"]</td>
-                    <td><a href="~/edit.cshtml?id=@dr["id"]">edit</a><a href="">dosdg</a></td>
+                    <td><a href="~/edit.cshtml?id=@dr["id"]"><i class="fas fa-pencil-alt"></i></a> <a href=""><i class="far fa-trash-alt"></i></a></td>
 
                 </tr>
             }

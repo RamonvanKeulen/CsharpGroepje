@@ -37,6 +37,7 @@
         Nummers Toevoegen<br /><br />
         <div class="formfield">
             <form method="post" action="#">
+                <input class="form-control mb-2" type="text" name="id" placeholder="ID" />
                 <input class="form-control mb-2" type="text" name="title" placeholder="Titel" />
                 <input class="form-control mb-2" type="text" name="artist" placeholder="Artiest" />
                 <input class="form-control mb-2" type="text" name="album" placeholder="Album" />
@@ -51,6 +52,7 @@
 
     @if (IsPost) {
 
+        string id = Request.Form["id"];
         string title = Request.Form["title"];
         string artist = Request.Form["artist"];
         string album = Request.Form["album"];
@@ -63,6 +65,7 @@
 
         DataRow dr = sm.GetEmptyRow();
 
+        dr["id"] = id;
         dr["title"] = title;
         dr["artist"] = artist;
         dr["album"] = album;
@@ -72,7 +75,6 @@
 
         sm.SaveRow(dr);
         Response.Redirect(@"~/ViewPage1.cshtml");
-    }
     }
 </body>
 </html>

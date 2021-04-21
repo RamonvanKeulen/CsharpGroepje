@@ -18,6 +18,7 @@ namespace FirstPlaylist.App_Code
 
             DataTable songs = new DataTable("song");
 
+            DataTable id = new DataTable("id");
             DataTable title = new DataTable("title");
             DataTable artist = new DataTable("artist");
             DataTable album = new DataTable("album");

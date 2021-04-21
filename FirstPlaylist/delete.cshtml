@@ -11,7 +11,15 @@
 </head>
 <body>
     <div>
-    
+        @{
+            string x = Request.QueryString["id"];
+
+            <h1>@x</h1>
+
+            if (x == null || x == "")
+            { <h1 class="text">OEII, er is geen ID meegegeven!</h1> }
+
+        }
     </div>
 </body>
 </html>
