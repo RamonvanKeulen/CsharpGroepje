@@ -1,6 +1,7 @@
 <?xml version="1.0" standalone="yes"?>
 <playlist>
   <song>
+	<id>1</id>
     <title>Wellerman (Sea Shanty / 220 Kid X Billen Ted Remix)</title>
     <artist>Nathan Evans</artist>
     <album>Wellerman (Sea Shanty)</album>
@@ -9,6 +10,7 @@
     <file>nathan-nvans-wellerman.mp3</file>
   </song>
   <song>
+	<id>2</id>
     <title>Blijven Slapen</title>
     <artist>Snelle X Maan</artist>
     <album>Lars</album>
@@ -17,6 +19,7 @@
     <file>nathan-nvans-wellerman.mp3</file>
   </song>
   <song>
+	<id>3</id>
     <title>Goud</title>
     <artist>Suzan en Freek</artist>
     <album>Goud</album>
@@ -25,6 +28,7 @@
     <file>nathan-nvans-wellerman.mp3</file>
   </song>
   <song>
+	<id>4</id>
     <title>Friday (Dopamine Re-Edit)</title>
     <artist>Riton, Nightcrawlers, Mufasa en Hypeman</artist>
     <album>Friday</album>
@@ -33,6 +37,7 @@
     <file>nathan-nvans-wellerman.mp3</file>
   </song>
   <song>
+	<id>5</id>
     <title>Cover Me in Sunshine</title>
     <artist>P!nk, Willow Sage Hart</artist>
     <album>Sunshine</album>
@@ -41,46 +46,12 @@
     <file>nathan-nvans-wellerman.mp3</file>
   </song>
   <song>
+	<id>6</id>
     <title>All We Got</title>
     <artist>Robin Schulz, Kiddo</artist>
     <album>All We Got</album>
     <year>2020</year>
     <length>3:10</length>
     <file>robin-schulz-all-we-got.mp3</file>
-  </song>
-  <song>
-    <title>a</title>
-    <artist>a</artist>
-    <album>a</album>
-    <year>a</year>
-    <length>a</length>
-  </song>
-  <song>
-    <title>a</title>
-    <artist>a</artist>
-    <album>a</album>
-    <year>a</year>
-    <length>a</length>
-  </song>
-  <song>
-    <title>v</title>
-    <artist>v</artist>
-    <album>v</album>
-    <year>v</year>
-    <length>v</length>
-  </song>
-  <song>
-    <title>r</title>
-    <artist>r</artist>
-    <album>r</album>
-    <year>r</year>
-    <length>r</length>
-  </song>
-  <song>
-    <title>f</title>
-    <artist>f</artist>
-    <album>f</album>
-    <year>f</year>
-    <length>f</length>
   </song>
 </playlist>
