@@ -50,17 +50,28 @@
 
 
     @if (IsPost) {
-        DataRow dr = mySongMethods.GetEmptyRow();
 
-        dr[0]= Request.Form["title"];
-        dr[1] = Request.Form["artist"];
-        dr[2] = Request.Form["album"];
-        dr[3] = Request.Form["year"];
-        dr[4] = Request.Form["length"];
-        dr[5] = Request.Form["file"];
+        string title = Request.Form["title"];
+        string artist = Request.Form["artist"];
+        string album = Request.Form["album"];
+        string year = Request.Form["year"];
+        string length = Request.Form["length"];
+        string pfile = Request.Form["file"];
 
-        mySongMethods.SaveRow(file, dr);
-        Response.Redirect(@"~/index.cshtml");
+        SongMethods sm = new SongMethods();
+        DataSet dsws = sm.GetAllSongs();
+
+        DataRow dr = sm.GetEmptyRow();
+
+        dr["title"] = title;
+        dr["artist"] = artist;
+        dr["album"] = album;
+        dr["year"] = year;
+        dr["length"] = length;
+        dr["file"] = file;
+
+        sm.SaveRow(dr);
+        Response.Redirect(@"~/ViewPage1.cshtml");
     }
     }
 </body>

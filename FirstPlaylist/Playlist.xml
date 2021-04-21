@@ -1,52 +1,86 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-
+<?xml version="1.0" standalone="yes"?>
 <playlist>
-	<song>
-		<title>Wellerman (Sea Shanty / 220 Kid X Billen Ted Remix)</title>
-		<artist>Nathan Evans</artist>
-		<album>Wellerman (Sea Shanty)</album>
-		<year>2021</year>
-		<length>1:56</length>
-		<file>nathan-nvans-wellerman.mp3</file>
-	</song>
-	<song>
-		<title>Blijven Slapen</title>
-		<artist>Snelle X Maan</artist>
-		<album>Lars</album>
-		<year>2021</year>
-		<length>3:04</length>
-		<file>nathan-nvans-wellerman.mp3</file>
-	</song>
-	<song>
-		<title>Goud</title>
-		<artist>Suzan en Freek</artist>
-		<album>Goud</album>
-		<year>2021</year>
-		<length>3:22</length>
-		<file>nathan-nvans-wellerman.mp3</file>
-	</song>
-	<song>
-		<title>Friday (Dopamine Re-Edit)</title>
-		<artist>Riton, Nightcrawlers, Mufasa en Hypeman</artist>
-		<album>Friday</album>
-		<year>2021</year>
-		<length>2:49</length>
-		<file>nathan-nvans-wellerman.mp3</file>
-	</song>
-	<song>
-		<title>Cover Me in Sunshine</title>
-		<artist>P!nk, Willow Sage Hart</artist>
-		<album>Sunshine</album>
-		<year>2021</year>
-		<length>2:37</length>
-		<file>nathan-nvans-wellerman.mp3</file>
-	</song>
-	<song>
-		<title>All We Got</title>
-		<artist>Robin Schulz, Kiddo</artist>
-		<album>All We Got</album>
-		<year>2020</year>
-		<length>3:10</length>
-		<file>robin-schulz-all-we-got.mp3</file>
-	</song>
+  <song>
+    <title>Wellerman (Sea Shanty / 220 Kid X Billen Ted Remix)</title>
+    <artist>Nathan Evans</artist>
+    <album>Wellerman (Sea Shanty)</album>
+    <year>2021</year>
+    <length>1:56</length>
+    <file>nathan-nvans-wellerman.mp3</file>
+  </song>
+  <song>
+    <title>Blijven Slapen</title>
+    <artist>Snelle X Maan</artist>
+    <album>Lars</album>
+    <year>2021</year>
+    <length>3:04</length>
+    <file>nathan-nvans-wellerman.mp3</file>
+  </song>
+  <song>
+    <title>Goud</title>
+    <artist>Suzan en Freek</artist>
+    <album>Goud</album>
+    <year>2021</year>
+    <length>3:22</length>
+    <file>nathan-nvans-wellerman.mp3</file>
+  </song>
+  <song>
+    <title>Friday (Dopamine Re-Edit)</title>
+    <artist>Riton, Nightcrawlers, Mufasa en Hypeman</artist>
+    <album>Friday</album>
+    <year>2021</year>
+    <length>2:49</length>
+    <file>nathan-nvans-wellerman.mp3</file>
+  </song>
+  <song>
+    <title>Cover Me in Sunshine</title>
+    <artist>P!nk, Willow Sage Hart</artist>
+    <album>Sunshine</album>
+    <year>2021</year>
+    <length>2:37</length>
+    <file>nathan-nvans-wellerman.mp3</file>
+  </song>
+  <song>
+    <title>All We Got</title>
+    <artist>Robin Schulz, Kiddo</artist>
+    <album>All We Got</album>
+    <year>2020</year>
+    <length>3:10</length>
+    <file>robin-schulz-all-we-got.mp3</file>
+  </song>
+  <song>
+    <title>a</title>
+    <artist>a</artist>
+    <album>a</album>
+    <year>a</year>
+    <length>a</length>
+  </song>
+  <song>
+    <title>a</title>
+    <artist>a</artist>
+    <album>a</album>
+    <year>a</year>
+    <length>a</length>
+  </song>
+  <song>
+    <title>v</title>
+    <artist>v</artist>
+    <album>v</album>
+    <year>v</year>
+    <length>v</length>
+  </song>
+  <song>
+    <title>r</title>
+    <artist>r</artist>
+    <album>r</album>
+    <year>r</year>
+    <length>r</length>
+  </song>
+  <song>
+    <title>f</title>
+    <artist>f</artist>
+    <album>f</album>
+    <year>f</year>
+    <length>f</length>
+  </song>
 </playlist>

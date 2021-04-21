@@ -10,7 +10,7 @@ namespace FirstPlaylist.App_Code
         public string file = "playlist.xml";
         public DataSet ds = null;
 
-        public DataSet GetAllSongs(string pFile)
+        public DataSet GetAllSongs()
         {
             if (ds == null)
             { 
@@ -35,7 +35,7 @@ namespace FirstPlaylist.App_Code
             return ds.Tables["song"].NewRow();
         }
 
-        public void SaveRow(string file, DataRow dr)
+        public void SaveRow(DataRow dr)
         {
             ds.Tables["song"].Rows.Add(dr);
             ds.WriteXml(HttpContext.Current.Server.MapPath(file));
