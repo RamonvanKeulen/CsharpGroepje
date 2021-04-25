@@ -41,6 +41,16 @@ namespace FirstPlaylist.App_Code
             ds.Tables["song"].Rows.Add(dr);
             ds.WriteXml(HttpContext.Current.Server.MapPath(file));
         }
+
+        public void Delete(string id)
+        {
+            DataRow[] drArray = ds.Tables["song"].Select("id = '" + id + "'");
+            if (drArray != null && drArray.Length > 0)
+            {
+                drArray[0].Delete();
+                ds.WriteXml(HttpContext.Current.Server.MapPath(file));
+            }
+        }
         
     }
 }

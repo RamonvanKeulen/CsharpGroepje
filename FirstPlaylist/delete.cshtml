@@ -3,23 +3,59 @@
 }
 
 <!DOCTYPE html>
+@using System.Data;
+@using FirstPlaylist.App_Code;
+@{
+    SongMethods mySongMethods = Session["playlistClass"] as SongMethods;
+    string file = Session["file"] as string;
+}
 
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
     <title></title>
+
+    <script src="~/Scripts/jquery-3.0.0.js"></script>
+
+    <link rel="stylesheet" href="~/Content/bootstrap.css" />
+    <script src="~/Scripts/bootstrap.js"></script>
+
+    <link rel="stylesheet" href="~/style.css" />
+    <link rel='icon' href='favicon.jpg' type='image/jpg' />
 </head>
 <body>
     <div>
-        @{
-            string x = Request.QueryString["id"];
 
-            <h1>@x</h1>
 
-            if (x == null || x == "")
-            { <h1 class="text">OEII, er is geen ID meegegeven!</h1> }
+    </div>
+    <div class="boxcontainer">
+        <a class="btn btn-outline-primary" href="~/viewpage1.cshtml">Go back to homepage</a>
+        Nummers Toevoegen<br /><br />
+        <div class="formfield">
+            <form method="post" action="#">
+                <h4>Weet u zeker dat u deze song wilt verwijderen?</h4>
+                <label for="ja">Ja</label>
+                <input type="radio" id="ja" name="keuze" value="ja">
+                <label for="nee">Nee</label>
+                <input type="radio" id="nee" name="keuze" value="nee"><br />
+                <input class="btn btn-primary" type="submit" value="Opslaan" />
+            </form>
+        </div>
 
+        @if (IsPost)
+        {
+            SongMethods sm = new SongMethods();
+            if (Request.Form["keuze"] == "ja")
+            {
+                string id = Request.QueryString["id"];
+                sm.Delete(id);
+            }
+
+            Response.Redirect(@"~/viewpage1.cshtml");
         }
+
+
+
     </div>
 </body>
 </html>
