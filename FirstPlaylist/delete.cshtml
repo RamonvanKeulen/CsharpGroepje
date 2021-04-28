@@ -47,11 +47,10 @@
 
         @if (IsPost)
         {
-            SongMethods sm = new SongMethods();
             if (Request.Form["keuze"] == "ja")
             {
                 string id = Request.QueryString["id"];
-                sm.Delete(id);
+                mySongMethods.Delete(id);
             }
 
             Response.Redirect(@"~/viewpage1.cshtml");

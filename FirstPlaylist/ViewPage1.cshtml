@@ -4,29 +4,12 @@
     Layout = null;
 }
 <!DOCTYPE html>
-
+@using FirstPlaylist.App_Code;
 @{
 
-    DataSet ds = new DataSet("playlist");
-
-    DataTable songs = new DataTable("song");
-
-    DataColumn id = new DataColumn("id");
-    DataColumn title = new DataColumn("title");
-    DataColumn artist = new DataColumn("artist");
-    DataColumn album = new DataColumn("album");
-    DataColumn year = new DataColumn("year");
-    DataColumn length = new DataColumn("length");
-
-    ds.Tables.Add(songs);
-    songs.Columns.Add(id);
-    songs.Columns.Add(title);
-    songs.Columns.Add(artist);
-    songs.Columns.Add(album);
-    songs.Columns.Add(year);
-    songs.Columns.Add(length);
-
-    ds.ReadXml(HttpContext.Current.Server.MapPath("playlist.xml"));
+    SongMethods smds = new SongMethods();
+    DataSet ds = smds.GetAllSongs();
+    Session["playlistClass"] = smds;
 
 }
 

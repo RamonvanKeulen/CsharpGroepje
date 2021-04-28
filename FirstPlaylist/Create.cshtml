@@ -60,10 +60,8 @@
         string length = Request.Form["length"];
         string pfile = Request.Form["file"];
 
-        SongMethods sm = new SongMethods();
-        DataSet dsws = sm.GetAllSongs();
 
-        DataRow dr = sm.GetEmptyRow();
+        DataRow dr = mySongMethods.GetEmptyRow();
 
         dr["id"] = id;
         dr["title"] = title;
@@ -73,7 +71,7 @@
         dr["length"] = length;
         dr["file"] = file;
 
-        sm.SaveRow(dr);
+        mySongMethods.SaveRow(dr);
         Response.Redirect(@"~/ViewPage1.cshtml");
     }
 </body>
